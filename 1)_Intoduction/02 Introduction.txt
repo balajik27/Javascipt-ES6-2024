@@ -1,0 +1,11 @@
+What is JS and why JS in web development?
+
+JS is a high-level, dynamic, and interpreted programming language.
+It is primarily used for client-side scripting on the web, allowing developers 
+to create interactive web pages. JavaScript is also popular for developing desktop
+and mobile applications, as well as server-side programming with technologies 
+such as Node.js.
+
+JavaScript is often used to add interactive behavior to websites, 
+create web applications, and develop desktop and mobile applications.
+It is also used in server-side programming with technologies such as Node.js, mobile app development, game development, and database administration. JavaScript is supported by most web browsers without the need for additional plugins, making it an ideal language for web development.

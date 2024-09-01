@@ -1,0 +1,39 @@
+### String
+
+In JavaScript, single and multiple characters are considered as strings. Strings can be represented using single quotes (' '), double quotes (" "), or backticks ( ``)( available in before and after ES6 ).
+
+let singleQuotes = 'Hello';
+let doubleQuotes = "World";
+let backticks = `JavaScript`;
+
+console.log(singleQuotes);  // Output: Hello
+console.log(doubleQuotes);  // Output: World
+console.log(backticks);     // Output: JavaScript
+
+// Multi-line string using backticks
+let multiLine = `This is a
+multi-line
+string`;
+console.log(multiLine);
+
+In ES6, template literals were introduced. They allow for easier string interpolation and multi-line strings. Here's an example:
+
+const name = 'John';
+const age = 30;
+
+// Using template literals for string interpolation
+const greeting = `Hello, my name is ${name} and I'm ${age} years old.`;
+
+console.log(greeting);
+// Output: Hello, my name is John and I'm 30 years old.
+
+// Multi-line string using template literals
+const multiLine = `This is a
+multi-line string
+using template literals.`;
+
+console.log(multiLine);
+// Output:
+// This is a
+// multi-line string
+// using template literals.

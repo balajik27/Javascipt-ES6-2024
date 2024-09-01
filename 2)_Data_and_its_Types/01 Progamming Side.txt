@@ -1,0 +1,18 @@
+Programming Side (Before and After ES6 - ECMA SCRIPT 6 - Standard version)
+
+Date and Its Types
+
+Numbers and characters are the primary data types used on the internet.
+ The initial step is to understand data and its types in JavaScript.
+
+1. Number( number , big int )
+2. String( single and multiple characters)
+3. Boolean ( true or false )
+4. Null
+5. Undefined
+
+### Number
+
+In JavaScript, there are only two numeric data types: number and BigInt(ES2020). 
+Unlike other programming languages, 
+JavaScript doesn't have separate float or double types.

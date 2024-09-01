@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+// String concatination (addition)
+
+Greeting = "Hello , ";
+Name = "Balaji";
+console.log(Greeting + Name )
+
+let str = "The number is: ";
+let num = 42;
+let result = str + num;
+console.log(result); // Outputs: "The number is: 42"
+//In this case, the number 42 is automatically converted to the string "42" before concatenation.
+
+let result2 = "The answer is: " + 40 + 2;
+console.log(result2); // Outputs: "The answer is: 402"
+
+// In this case:
+
+// - `"The answer is: "` + `40` results in `"The answer is: 40"`
+// - Then `"The answer is: 40"` + `2` results in `"The answer is: 402"`
+
+let result3 = 40 + 2 + " is the answer.";
+console.log(result3); // Outputs: "42 is the answer."
+
+// In this case:
+
+// - `40` + `2` results in `42`
+// - Then `42` + `" is the answer."` results in `"42 is the answer."`
+
+// Answer this question:
+
+id = 456
+id2 = 456
+id3 = '567';
+
+result4 = id + id2 + Number(id3); // left to right
+console.log(result4)
+
+
+result4 = id.toString() + id2 + id3; // left to right
+console.log(result4)
+
+
+</script>

@@ -1,0 +1,23 @@
+Number:
+
+Size of the number is 2^53 - 1 -  (which is 9,007,199,254,740,991)
+
+or get from here Number.MAX_SAFE_INTEGER.
+
+if you try to store large integer without big int , then you may lose the values , it might not be accurate.
+
+You can perform arithmetic operations with `BigInt` just like with regular numbers, but you cannot mix `BigInt` and `Number` types directly.
+
+let num = 42;           // This is a Number
+console.log(typeof num); // "number"
+
+let bigIntNum = 123456789012345678901234567890n; // This is a BigInt
+console.log(typeof bigIntNum); // "bigint"
+
+You can create Big int by appending n and using BigInt().
+
+let bigIntFromNumber = BigInt(1234567890);    // Converts a number to BigInt
+console.log(bigIntFromNumber); // 1234567890n
+
+let bigIntFromString = BigInt("123456789012345678901234567890"); // Converts a string to BigInt
+console.log(bigIntFromString); // 123456789012345678901234567890n

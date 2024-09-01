@@ -1,0 +1,9 @@
+# Javascript
+
+We're going to learn JavaScript, focusing on the differences before and after ES6 (ECMAScript 6 - 2015 ). 
+First, we'll explore JavaScript's dual nature as both a programming language and a scripting language.
+
+Programming Side
+Scripting Side
+
+
