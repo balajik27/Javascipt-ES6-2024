@@ -1,0 +1,25 @@
+
+Variable:
+
+1. a-z(age) , A-Z , 0-9 , _ , $ 
+2. Dont use number at first ( age1 , 1age)
+
+Number or Integer
+
+3. Case sensitive:
+
+age = 10
+
+console.log(age)
+
+4. Keywords or Reserved words ( if , else , for , function ... )
+
+if = 10;
+else = 50;
+
+- if,else
+
+
+5. Js Naming conventions 
+
+camelCase (variable) , PascalCase (class name)
