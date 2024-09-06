@@ -20,13 +20,66 @@
     // let result = add(number1 , number2);
     // let result = multiple(number1 , number2);
 
-    console.log(`You selected  ${arithmeticOperation} operation , the number ${number1} and ${number2}  gives result as  ${result}`)
 
     // 4 - functions 
 
     // output 
 
     // addition , subraction , multiply , divide  
+
+
+    // let arithmeticOperation = prompt("Enter the operation(add , subract , multiply , divide): ");
+    // let number1 = Number(prompt("Enter the number 1:"));
+    // let number2 = Number(prompt("Enter the number 2:"));
+    let arithmeticOperation = 'multiply';
+    let number1 = 45
+    let number2 = 2
+
+    let result = 0;
+
+    function add(num1 , num2){ // parameters , function scope (local scope)
+        return num1 + num2;
+    }
+    function subract(num1 , num2){ // parameters , function scope (local scope)
+        return num1 - num2;
+    }
+    function multiply(num1 , num2){ // parameters , function scope (local scope)
+        return num1 * num2;
+    }
+    function divide(num1 , num2){ // parameters , function scope (local scope)
+        return num1 / num2;
+    }
+    
+
+    if(arithmeticOperation == 'add'){
+        result = add(number1 , number2); //function call or function invocation (arguments) 
+    }
+
+    if(arithmeticOperation == 'subract'){
+        result = subract(number1 , number2);
+    }
+
+    if(arithmeticOperation == 'multiply'){
+        result = multiply(number1 , number2);
+    }
+
+    if(arithmeticOperation == 'divide'){
+        if(number2 == 0){
+            alert("Number 2 should not be zero")
+        }else{
+            result = divide(number1 , number2);
+        }
+    }
+
+
+
+    // console.log("You selected " + arithmeticOperation + " operation , the number " + number1 + " and " + number2 + " gives result as " + result)
+
+
+    console.log(`You selected  ${arithmeticOperation} operation , the number ${number1} and ${number2}  gives result as  ${result}`)
+
+
+
 
 
 </script>
