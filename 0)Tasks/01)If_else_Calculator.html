@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+
+// Calculator Task
+
+// inputs
+// 1. add , subract , multiplication , division
+// 2. number1
+// 3. number2
+
+
+// output
+// You selected add operation , the number 5 and 4 gives result as 9.
+// ctrl + shift + j - to open console
+
+
+// ; - end of the statement
+
+// multiple line - program
+
+//return - stop the program , return the value
+
+function add(){
+    console.log("Hello World")
+    console.log("Hello World")
+    return 45;
+    
+    console.log("Hello World")
+    
+}
+
+
+add()
+
+
+
+
+
+
+
+
+let arithmeticOperation = prompt("Enter the operation(add , subract , multiply , divide): ");
+let number1 = Number(prompt("Enter the number 1:"));
+let number2 = Number(prompt("Enter the number 2:"));
+
+let result = 0;
+
+if(arithmeticOperation == 'add'){
+    result = number1 + number2;
+}
+
+if(arithmeticOperation == 'subract'){
+    result = number1 - number2;
+}
+
+if(arithmeticOperation == 'multiply'){
+    result = number1 * number2;
+}
+
+if(arithmeticOperation == 'divide'){
+    if(number2 == 0){
+        alert("Number 2 should not be zero")
+    }else{
+        result = number1 / number2;
+    }
+}
+
+
+
+// console.log("You selected " + arithmeticOperation + " operation , the number " + number1 + " and " + number2 + " gives result as " + result)
+
+
+console.log(`You selected  ${arithmeticOperation} operation , the number ${number1} and ${number2}  gives result as  ${result}`)
+
+
+
+
+
+
+
+</script>
