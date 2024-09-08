@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!--
+
+Ques 3: 
+
+Take any array of integers.
+
+Print the unit digit of all the integers, then print tenth digit of all the integers
+
+[45,,789,544,54,98,1234,678,67]
+
+Output: 
+
+5, 9,4,4,8,4,8,7
+4,8,4,5,9,3,7,6
+    
+    -->
+
+    <script>
+
+        let array = [45,789,5,55744,54,98,1234,678,67];
+
+        let unitDigitArr = [];
+        let tenthDigitArr = [];
+
+        for(let i = 0; i < array.length; i++){
+            // let unitDig = array[i] % 10;
+            unitDigitArr.push(array[i] % 10)
+        }
+
+        for(let i = 0; i < array.length; i++){
+            let tenthDig = Math.trunc(array[i] / 10); // double digt 45 = 4.5
+            tenthDigitArr.push(tenthDig % 10)
+        }
+
+
+
+        console.log("unitDigitArr = " , unitDigitArr)
+        console.log("tenthDigitArr = ",tenthDigitArr)
+
+
+        //output
+        // unitDigitArr =   [5, 9, 5, 4, 4, 8, 4, 8, 7]
+        // tenthDigitArr =  [4, 8, 0, 4, 5, 9, 3, 7, 6]
+
+
+
+        // 4567
+
+        // Math functions in JS 
+
+        // console.log(Math.round(4.5))
+        // .5 < 4 .5 >= 5
+
+        // console.log(Math.ceil(4.8))
+        // 5
+
+
+        // console.log(Math.floor(-4.9)) // 4 // -3 , -5
+        //4
+
+        // console.log(Math.trunc(4.5675673)) // -4
+        //4
+
+        // console.log(Math.trunc(Math.random() * 100))
+        // 0 - 1
+        // round()
+        // ceil()
+        // floor()
+        // trunc()
+        // random()
+
+
+
+    </script>
+
+
+    
+
+
+
+    
+</body>
+</html>
