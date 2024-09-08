@@ -34,14 +34,45 @@ for(let i = number; i > 0;){
     i = Math.trunc(i / 10)
 }
 
-console.log(number)
-console.log(reverse)
+// console.log(number)
+// console.log(reverse)
 
-if(number == reverse){
+// if(number == reverse){
+//     console.log("Palindrome")
+// }else{
+//     console.log("Not Palindrome")
+// }
+
+
+let num = 234432;
+
+let temporary = num.toString();
+
+// console.log(temporary)
+
+// console.log(typeof temporary);
+
+// let name = 'malayalam';
+
+
+let nameLetters = temporary.split('');
+let reverseArray = nameLetters.reverse();
+let reverseString = reverseArray.join('');
+
+let reverseNum = Number(reverseString)
+
+
+
+if(num == reverseNum){
     console.log("Palindrome")
 }else{
     console.log("Not Palindrome")
 }
+
+
+// console.log(reverseString)
+
+
 
 
 
