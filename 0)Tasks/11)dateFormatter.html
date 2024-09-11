@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+
+    
+// 1.
+// let date = "04-05-2024"
+// "04/05/2024"
+
+// 2.
+// num = 4554
+// //length = 4
+
+// num = 34
+// //length = 2
+
+// num = 454654
+
+// 3. task3
+// arr = [34,55,56,56,657,674 , 4546]
+
+// 4.
+// arr = [6554,765765,34534,5,67,567,4353]
+
+
+// let num = 234432;
+let arr = [6554,765765,34543,5,67,567,4353]
+
+// 0 , 1, 2, 3, 4, 5, 6
+for(let i=0;i<arr.length;i++){
+
+    let reverse = 0;
+    for(let j = arr[i] ; j > 0;){
+        let unitDig = j % 10;
+        reverse = reverse * 10 + unitDig;
+        j = Math.trunc(j/10)
+    }
+
+    if(reverse == arr[i]){
+        console.log(arr[i] , "Is Palindrome");
+    }else {
+        console.log(arr[i] , "Is Not Palindrome");
+    }
+    
+}
+
+
+
+
+
+
+</script>
