@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body_cls">
+
+    <main>
+
+        <section id="domSection">
+
+            <h2 class="heading" id="heading1">DOM Manipulation</h2>
+            <p class="para" id="para1">Hello world 1</p>
+            <p class="para" id="para2">Hello world 2 </p>
+            <p class="paragraph" id="para2">Hello world 3</p>
+
+        </section>
+    </main>
+
+   
+    
+</body>
+</html>
+
+<script>
+
+    //Method 1
+    // let dom = document.documentElement
+    // let h2_tag = document.body.children[0].children[0].children[0]
+    // h2_tag.textContent = "HTML DOM Manipulation"
+    // console.log(h2_tag.textContent)
+
+
+   
+
+    //Method 2
+    let p_tag = document.getElementById("para1");
+    p_tag.textContent = "HELLO Program"
+    // console.log(p_tag.textContent)
+
+    //Method 2
+    let p_tag2 = document.getElementsByTagName("p")
+    // for(let i=0;i<p_tag2.length;i++){
+    //     console.log(p_tag2[i].textContent)
+    // }
+
+    let p_tag3 = document.getElementsByClassName("para")
+    // for(let i=0;i<p_tag3.length;i++){
+    //     console.log(p_tag3[i].textContent)
+    // }
+
+    let p_tag4 = document.querySelectorAll(".para")
+    
+    // console.log(p_tag4)
+
+    let section = document.getElementById('domSection');
+    section.innerHTML = `
+
+    <div>
+        <p>New text</p>
+    </div>
+    
+    `
+
+    section.style.backgroundColor = "red" // CSSOM
+    section.style.fontSize = "40px" // CSSOM
+
+    console.log(section)
+
+
+    document.title = "New doc"
+</script>
