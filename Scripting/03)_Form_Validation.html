@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #main{
+           
+            height: 100vh;
+            width: 100vw;
+            background-color: grey;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .registerBox{
+            border: 1px solid #000;
+            padding: 5%;
+
+
+        }
+        .registerText{
+            text-align: center;
+        }
+
+        input{
+            width: 250px;
+            padding: 4%;
+            border-radius: 6px;
+            outline: none;
+            border: none;
+            margin: 4px 0;
+        }
+        .errorText{
+            color: red;
+        }
+        .registerBtn{
+            text-align: center;
+            margin-top: 7px;
+        }
+        .registerBtn button{
+            width: 100px;
+            padding: 2%;
+            font-size: 17px;
+            border-radius: 5px;
+        }
+        #firstNameError , #lastNameError , #emailError , #passwordError , #confirmPasswordError{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <main id="main">
+
+        <div class="registerBox">
+
+            <h2 class="registerText">Register</h2>
+
+            <form action="" onsubmit="register(event)">
+
+                <div class="">
+                    <label for="">First name: </label> <br>
+                    <input type="text" id="firstName"  placeholder="Enter First Name"> <br>
+                    <span class="errorText" id="firstNameError">*First name should have length more than 2</span>
+                </div>
+                <div class="">
+                    <label for="">Last name: </label> <br>
+                    <input type="text" id="lastName" placeholder="Enter Last Name"> <br>
+                    <span class="errorText" id="lastNameError">*Last name should have atleast 1 character</span>
+                </div>
+                <div class="">
+                    <label for="">Email: </label> <br>
+                    <input type="text" id="emailId" class="" name="" placeholder="Email"> <br>
+                    <span class="errorText" id="emailError">*Invalid Email</span>
+                </div>
+                <div class="">
+                    <label for="">Password: </label> <br>
+                    <input type="password" id="password" placeholder="Password"> <br>
+                    <span class="errorText" id="passwordError">*Password length should be more than 7</span>
+
+                </div>
+                <div class="">
+                    <label for="">Confirm Password: </label> <br>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password"> <br>
+                    <span class="errorText" id="confirmPasswordError"></span>
+
+                </div>
+                
+
+               
+
+                <div class="registerBtn">
+                    <button type="submit" onclick="">Register</button>
+                </div>
+
+
+              
+            </form>
+
+        </div>
+
+        
+
+    </main>
+
+
+    
+</body>
+</html>
+
+<script>
+
+    function register(event){
+        event.preventDefault()
+
+        let fname = document.getElementById("firstName");
+        let lname = document.getElementById("lastName");
+        let email = document.getElementById("emailId")
+        let password = document.getElementById("password")
+        let confirmPassword = document.getElementById("confirmPassword")
+
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+
+        // 1 2
+        // console.log(fnameContent.length )
+        if(fname.value.length < 3){
+            fname.style = "border: 3px solid red"
+            document.getElementById("firstNameError").style = "display: block"
+        } else {
+             fname.style = "border: 3px solid green"
+             document.getElementById("firstNameError").style = "display: none"
+        }
+
+        if(lname.value.length === 0){
+            lname.style = "border: 3px solid red"
+            document.getElementById("lastNameError").style = "display: block"
+        } else {
+             lname.style = "border: 3px solid green"
+             document.getElementById("lastNameError").style = "display: none"
+        }
+
+        console.log(emailRegex.test(email.value))
+
+        if(!emailRegex.test(email.value)){
+            email.style = "border: 3px solid red"
+            document.getElementById("emailError").style = "display: block"
+        } else {
+             email.style = "border: 3px solid green"
+             document.getElementById("emailError").style = "display: none"
+
+        }
+
+        if(password.value.length < 8){
+            password.style = "border: 3px solid red"
+            document.getElementById("passwordError").style = "display: block"
+        } else {
+             password.style = "border: 3px solid green"
+             document.getElementById("passwordError").style = "display: none"
+        }
+
+        console.log("password = ",password.value)
+        console.log("confirmPassword = " , confirmPassword.value)
+
+        if(confirmPassword.value.length < 8){
+            confirmPassword.style = "border: 3px solid red"
+            document.getElementById("confirmPasswordError").style = "display: block"
+            document.getElementById("confirmPasswordError").textContent = "*Password length should be more than 7"
+        } else {
+            if(password.value !== confirmPassword.value){
+                confirmPassword.style = "border: 3px solid red"
+                document.getElementById("confirmPasswordError").style = "display: block"
+                document.getElementById("confirmPasswordError").textContent = "*Password mismatch"
+
+            } else {
+                confirmPassword.style = "border: 3px solid green"
+                document.getElementById("confirmPasswordError").style = "display: none"
+            }
+        }
+
+
+
+    }
+
+    // regex - regular expression
+
+
+    // register()
+
+
+
+
+
+</script>
