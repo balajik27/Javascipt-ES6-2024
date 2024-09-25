@@ -94,6 +94,8 @@
                 <div class="">
                     <label for="">Confirm Password: </label> <br>
                     <input type="password" id="confirmPassword" placeholder="Confirm Password"> <br>
+                    <!-- icon onclick="showPassword()"  -->
+
                     <span class="errorText" id="confirmPasswordError"></span>
 
                 </div>
@@ -122,75 +124,126 @@
 
 <script>
 
-    function register(event){
-        event.preventDefault()
 
-        let fname = document.getElementById("firstName");
-        let lname = document.getElementById("lastName");
-        let email = document.getElementById("emailId")
-        let password = document.getElementById("password")
-        let confirmPassword = document.getElementById("confirmPassword")
-
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // keypress 
+    // Backspace , enter , shift , ctrl 
     
+    // keydown
+    // keyup 
 
-        // 1 2
-        // console.log(fnameContent.length )
+    // Copy , paste doesnt work 
+    
+     // input  - form fields
+
+     let firstNameError = false
+     let lastNameError = false
+     let emailError = false
+     let password = false
+     let confirmPasswordError = false
+
+     function checkFirstName(){
+        let fname = document.getElementById("firstName");
         if(fname.value.length < 3){
             fname.style = "border: 3px solid red"
             document.getElementById("firstNameError").style = "display: block"
+            firstNameError = true
         } else {
              fname.style = "border: 3px solid green"
              document.getElementById("firstNameError").style = "display: none"
+            firstNameError = false
+
         }
 
+     }
+     function checkLastName(){
+        let lname = document.getElementById('lastName')
         if(lname.value.length === 0){
             lname.style = "border: 3px solid red"
             document.getElementById("lastNameError").style = "display: block"
+            lastNameError = true
         } else {
              lname.style = "border: 3px solid green"
              document.getElementById("lastNameError").style = "display: none"
+             lastNameError = false
         }
-
-        console.log(emailRegex.test(email.value))
-
+     }
+     function checkEmail(){
+        let email = document.getElementById('emailId')
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
         if(!emailRegex.test(email.value)){
             email.style = "border: 3px solid red"
             document.getElementById("emailError").style = "display: block"
+            emailError = true
         } else {
              email.style = "border: 3px solid green"
              document.getElementById("emailError").style = "display: none"
+             emailError = false
 
         }
-
+     }
+     function checkPassword(){
+        let password = document.getElementById("password")
+    
         if(password.value.length < 8){
             password.style = "border: 3px solid red"
             document.getElementById("passwordError").style = "display: block"
+            password = true
         } else {
              password.style = "border: 3px solid green"
              document.getElementById("passwordError").style = "display: none"
+             password = false
         }
 
-        console.log("password = ",password.value)
-        console.log("confirmPassword = " , confirmPassword.value)
+     }
+     function checkConfirmPassword(){
+        let password = document.getElementById("password")
+        let confirmPassword = document.getElementById("confirmPassword")
 
         if(confirmPassword.value.length < 8){
             confirmPassword.style = "border: 3px solid red"
             document.getElementById("confirmPasswordError").style = "display: block"
             document.getElementById("confirmPasswordError").textContent = "*Password length should be more than 7"
+            confirmPasswordError = true
         } else {
             if(password.value !== confirmPassword.value){
                 confirmPassword.style = "border: 3px solid red"
                 document.getElementById("confirmPasswordError").style = "display: block"
                 document.getElementById("confirmPasswordError").textContent = "*Password mismatch"
+                confirmPasswordError = true
 
             } else {
                 confirmPassword.style = "border: 3px solid green"
                 document.getElementById("confirmPasswordError").style = "display: none"
+                confirmPasswordError = false
             }
         }
 
+     }
 
+    document.getElementById('firstName').addEventListener('input' , checkFirstName)
+    document.getElementById('lastName').addEventListener('input' , checkLastName)
+    document.getElementById('emailId').addEventListener('input' , checkEmail)
+    document.getElementById('password').addEventListener('input' , checkPassword)
+    document.getElementById('confirmPassword').addEventListener('input' , checkConfirmPassword)
+
+
+
+
+    function register(event){
+        event.preventDefault()
+
+        checkFirstName()
+        checkLastName()
+        checkEmail()
+        checkPassword()
+        checkConfirmPassword()
+
+        if(!firstNameError && !lastNameError && !emailError && !password && !confirmPasswordError){
+                console.log("Sending data to backend..")
+        }
+
+     
 
     }
 

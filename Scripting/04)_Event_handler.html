@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #parentBox{
+
+            height: 300px;
+            width: 300px;
+            border: 1px solid red;
+
+        }
+
+        #childBox{
+
+            height: 100px;
+            width: 100px;
+            border: 1px solid green;
+            background-color: blue;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="parentBox">
+        <div id="childBox"></div>
+    </div>
+
+    <!-- <button id="mainBtn" onclick="add()" onclick="sub()" >Click me</button> -->
+    
+</body>
+</html>
+
+<script>
+
+    document.getElementById('parentBox').addEventListener('click' , function(){
+        console.log("Parent tag")
+        document.getElementById('parentBox').style = "background-color: red"
+    } ,true)
+    document.getElementById('childBox').addEventListener('click' , function(event){
+        console.log("child tag")
+        document.getElementById('childBox').style = "background-color: green"
+        event.stopPropagation()
+    },)
+
+
+    //Event bubbling
+    //  - stop passing event from child to parent. 
+
+    //Event capture
+    // allowing to pass from parent to child
+
+
+
+    //Event handler
+    // Pros
+    // 1. Simple function
+    // 2. We write js in html , inline js definition
+
+    // Cons
+    // 1. Not separated , so code gets messy.
+    // 2. if two functions are called , then it execute only the recent most function call.
+    // 3. not flexible
+    // 4. Large project cannot be used 
+
+    let btn = document.getElementById('mainBtn')
+
+    btn.addEventListener('click' , function (event){
+        console.log(event)
+        console.log(event.target.id)
+        console.log("Hello")
+        console.log("Hello")
+        console.log("Hello")
+        console.log("World")
+    })
+
+    btn.addEventListener('click' , function printingHW(event){
+        console.log(event)
+       
+        console.log("Hello")
+        console.log("World")
+    })
+
+
+    //Event bubbling
+
+
+
+
+    // function printingHW(event){
+    //     console.log(event)
+    //     console.log(event.target.id)
+    //     console.log("Hello")
+    //     console.log("Hello")
+    //     console.log("Hello")
+    //     console.log("World")
+    // }
+
+    //Event -
+    // User event - click , mouseover , mouseout , hover , submit
+    // System event - load , resize , scroll , unload
+
+    // Handler - Piece of code - function
+
+
+
+</script>

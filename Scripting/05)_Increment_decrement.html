@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="minus">-</button>
+    <span id="result">1</span>
+    <button id="plus">+</button>
+
+    cost: <span id="cost">10</span>
+    
+</body>
+</html>
+
+<script>
+
+    // 1 - 10
+    // 2 * 10 - 20
+    // 3 * 10 - 30
+    // 4 * 10- 40
+
+    // 1 * 10 = 10
+    // 2 * 10 = 20
+    // 2 * 20 = 40
+
+    let costTag = document.getElementById('cost');
+    let costValue = document.getElementById('cost').textContent;
+
+    let minus = document.getElementById('minus');
+    let plus = document.getElementById('plus');
+    let result = document.getElementById('result')
+
+    minus.addEventListener('click' , function(){
+        let value = result.textContent;
+        if(value>1){
+            value--;
+        }
+        result.textContent = value;
+        findTotal(value)
+    })
+    plus.addEventListener('click' , function(){
+        let value = result.textContent;
+        value++;
+        result.textContent = value;
+        findTotal(value)
+    })
+
+    function findTotal(value){
+        costTag.textContent = value * costValue
+    }
+
+
+
+
+</script>
