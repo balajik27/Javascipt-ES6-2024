@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="form-group">
+            <input type="text" id="inputText" class="form-control">
+            <button class="btn btn-primary" id="addBtn">Add</button>
+        </div>
+        
+        <ul id="notesList">
+
+           
+        </ul>
+
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+
+    let inputText = document.getElementById('inputText');
+    let addBtn = document.getElementById('addBtn');
+    let notesList = document.getElementById('notesList');
+
+
+    // Method 1 
+    addBtn.addEventListener('click', function (){
+
+        // console.log()
+        let text = inputText.value
+        if(text){ //"" - false
+
+            let li = document.createElement('li')
+            let span = document.createElement('span')
+            let deleteBtn = document.createElement('button')
+
+            span.textContent = text;
+            deleteBtn.textContent = "Delete"
+
+            deleteBtn.classList.add('btn', 'btn-danger')
+
+            deleteBtn.addEventListener('click', function (){
+                li.remove()
+            })
+
+            li.append(span , deleteBtn) //"hello" , single & multiple tag
+            // li.appendChild(span , deleteBtn)  it accepts single tag
+
+            notesList.appendChild(li)
+
+            inputText.value = "";
+            inputText.focus()
+
+        }
+
+    })
+
+    //Method 2
+    // addBtn.addEventListener('click', function (){
+
+    //     let text = inputText.value
+    //     if(text){
+
+            
+    //         let liContent = 
+    //             ` <li>
+    //                 <span>${text}</span>
+    //                 <button class="btn btn-danger">Delete</button>
+    //             </li>`
+
+           
+    //             notesList.innerHTML = notesList.innerHTML + liContent
+
+    //             inputText.value = ""
+    //             inputText.focus()
+    //     }
+
+    // })
+</script>
