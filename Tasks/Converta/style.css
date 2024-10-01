@@ -1,0 +1,606 @@
+*{
+
+    font-family: DM Sans;
+    
+    
+  /*  border: 1px solid black;*/
+}
+
+
+
+.sectionNav .navBgImg{
+    background: url(./assets/images/nav_main.png);
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 90px;
+}
+
+.sectionNav .navLinks{
+    display: flex;
+}
+
+.sectionNav .navLinks .nav-item{
+    list-style: none;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.sectionNav .homeMainLink:hover .homeAllLinks{
+    display: block;
+}
+
+.sectionNav .homeLinks .homeLinkItems{
+    list-style-type: none;
+}
+
+.sectionNav .homeAllLinks{
+
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    display: none;
+
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: -109px;
+    cursor: pointer;
+}
+.sectionNav .menuIcon{
+    height: 35px;
+    width: 35px;
+}
+
+
+
+.sectionNav .featuresAllLinks{
+
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    display: none !important;
+
+    position: absolute;
+    top: 65px;
+    left: -838px;
+    right: -153px;
+    gap: 80px;
+    cursor: pointer;
+    z-index: 999;
+}
+.sectionNav .featuresMainLink:hover .featuresAllLinks{
+    display: flex !important;
+}
+
+
+
+
+.sectionNav .hotBgColor{
+    font-weight: 700;
+    color: rgb(204, 27, 27);
+    background-color: rgb(252, 211, 211);
+}
+
+.sectionNav .newBgColor{
+    font-weight: 700;
+    color: green;
+    background-color: rgb(186, 255, 209);
+}
+
+
+
+.sectionNav .fa-angle-down{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.sectionNav .sectionHeader .secheadBack {  
+    
+    background: url(./assets/images/main-home-hero-min.png);
+
+    width:2000px;
+    
+    
+}
+
+
+
+.sectionTop .secTopImg {  
+    
+    background: url(./assets/images/main-home-hero-min.png);
+
+    width:2000px;
+    height: 700px; 
+    
+}
+
+.sectionTop .sec0Container{  
+   
+    padding-top: 70px;
+    padding-left: 120px;
+    
+}
+
+.sectionTop .sec0H2{  
+   
+    font-size: 5.5rem;
+    width: 800px;
+    
+}
+
+.sectionTop .sec0H2Span{  
+   
+    font-size: 5.5rem;
+    width: 900px;
+    color: rgb(77, 103, 250);
+    
+}
+
+.sectionTop .sec0Para{  
+   
+    font-size: 1.3rem;
+    width: 900px;
+    
+}
+
+
+
+.section0 .sec0H2 {
+
+    width: 800px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(61, 61, 116);    
+    
+}
+
+.section0 .sec0BottomH2 {
+
+    width: 500px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(61, 61, 116);    
+    
+}
+
+.section0 .sec0BottomText {
+
+    width: 500px;
+    font-size: 1.2rem;
+    opacity: 75%;
+    color: rgb(61, 61, 116);    
+    
+}
+
+
+.section0 .sec0icon {
+
+    height: 15px;
+    width: 20px;   
+    
+}
+
+
+.section1 .sec1Icon {
+
+    height: 40px;
+    width: 40px;
+    opacity: 90%;
+    
+}
+
+.section1 .sec1H2 {
+
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: rgb(61, 61, 116);    
+    
+}
+
+.section1 .sec1Text {
+
+    width: 650px;        
+    
+}
+
+.section1 .sec01Btn {
+
+    background-color: #4c6fff; 
+    color: #fff;     
+    
+}
+
+
+
+.section2 .sec2Img {
+
+    
+    width: 375px;
+}
+
+.section2 .sec2H2 {
+
+    font-size: 3.5rem;
+    color: rgb(61, 61, 116);    
+}
+
+
+
+.section2 .sec2Text {
+
+    font-size: 1.7rem;
+    color: rgb(61, 61, 116);    
+}
+
+
+
+.section3 .sec3H2 {
+
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(61, 61, 116);
+
+}
+
+
+.section3 .toggleBox {
+
+    height: 25px;
+    width: 48px;
+    background-color: rgb(212, 212, 212);
+    position: relative;
+    height: 25px;
+    z-index: -1;
+    
+}
+
+.section3 .toggleRound {
+
+    height: 23px;
+    width: 23px;
+    background-color: rgb(255, 255, 255);
+    position:absolute;
+}
+
+.toggleBox:hover .toggleRound {
+
+    right: 5px;
+}
+
+.section3 .paraText {
+
+    font-size: 1.2rem;
+}
+
+
+
+.section3 .sec3Button {
+
+    background-color: #6ac75a;
+    color: rgb(247, 246, 246);
+
+}
+
+
+.section4 .top {
+
+    color: rgb(61, 61, 116);
+}
+
+.section4 .bottom {
+
+    font-size: 1rem;
+}
+
+.section4 .containerBox {
+
+    height: 600px;
+    width: 350px;
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 20px;
+    border-width: 1.5px;
+    
+}
+
+.section4 .listType {
+
+    list-style:symbols();
+}
+
+
+
+.section4 .containerBox2 {
+
+    background-color: rgb(18, 18, 75);
+    color: white;
+    
+}
+
+.section4 .containerButton {
+
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #4c6fff;
+    color: #fff;
+}
+
+.section4 .listItem{
+    font-size: 1.2rem;
+    line-height: 2;
+    
+}
+
+
+
+
+
+.section4 .containerTextFirst {
+    font-size: 1.7rem;
+    
+}
+
+.section4 .containerTextH2 {
+    font-size: 4rem;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    
+}
+
+.section4 .containerText {
+    font-size: 1.2rem;
+    
+}
+
+
+
+
+.section5 .divH2 {
+
+    font-size: 4rem;
+    color: rgb(61, 61, 116);
+    width: 900px;
+    margin-left: 200px;
+    
+}
+
+.section5 .divP {
+
+    font-size: 1.2rem;
+    
+    width: 975px;
+    margin-left: 200px;
+}
+
+.section5 .divBtn {
+
+    background-color: #4c6fff;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 20px 30px;
+
+    
+}
+
+
+footer {
+
+    background: url(./assets/images/footer-bg.png);
+}
+
+.footerLeft {
+
+    width: 600px;
+}
+
+.socialLogo {
+
+    height: 30px;
+    border-radius: 50%;
+}
+
+footer .footMenu {
+
+    color: white;
+    opacity: 50%;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+
+    .sectionTop .secTopImg {    
+        
+    
+        width:600px;
+        height: 900px;         
+        
+    }
+
+    .sectionTop .sec0Container{  
+   
+        padding: 55px;
+        
+    }
+
+
+    .sectionTop .sec0H2{  
+   
+        font-size: 3.5rem;
+        width: 300px;
+        
+    }
+
+    .sectionTop .sec0H2Span{  
+   
+        font-size: 3.5rem;
+        width: 300px;
+        
+    }
+
+    .sectionTop .sec0Para{  
+   
+        font-size: 1.3rem;
+        width: 270px;
+        
+    }
+
+    .section0 .sec0H2 {
+
+        width: 350px;
+        font-size: 3.4rem;
+        
+        
+    }
+
+    .section0 .sec0BottomH2 {
+
+        width: 340px;
+        font-size: 2.1rem;
+          
+        
+    }
+    
+    .section0 .sec0BottomText {
+    
+        width: 280px;
+        font-size: 1.3rem;
+        
+        
+    }
+
+    .section0 .sec0icon {
+
+        height: 20px;
+        width: 25px;   
+        
+    }
+
+    .section1 .sec1H2 {
+
+        font-size: 2.6rem;
+        width: 400px;    
+        
+    }
+
+    .section1 .sec1Text {
+
+        width: 350px;  
+        font-size: 1.3rem;     
+        
+    }
+
+    .section1 .btn {
+
+        background-color:#4c6fff;   
+        color: rgb(226, 223, 223);
+        
+    }
+
+    .section1 .sec1Icon {
+
+        height: 40px;
+        width: 40px;
+        opacity: 90%;
+        
+    }
+
+    .section2 .sec2H2 {
+
+        font-size: 2rem;        
+        color: rgb(61, 61, 116);    
+    }
+
+    .section3 .sec3H2 {
+
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(61, 61, 116);    
+    
+    }
+
+    .section2 .sec2Img {
+
+    
+        width: 350px;
+    }
+
+    .section3 .paraText {
+
+        font-size: 1.1rem;
+    }
+
+    .section4 .containerButton {
+
+        padding: 15px 30px;
+        
+    }
+
+
+    .section5 .divH2 {
+
+        font-size: 2rem;
+        color: rgb(61, 61, 116);
+        width: 325px;
+        
+        
+    }
+
+
+
+    .section5 .divP {       
+        
+        width: 325px;
+        
+    }
+
+
+
+
+
+
+
+
+    /* --------------NAV Mobile----------------- */
+
+    .navMainMobile{
+        position: absolute;
+
+        background-color: #fff;
+        top: 80px;
+        left: 10px;
+        right: 10px;
+        border-radius: 20px;
+
+        max-height: 500px;
+        overflow-y: auto;
+
+        /* display: none; */
+    }
+
+    .subLinks{
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .rotateArrow{
+        transform: rotate(180deg);
+    }
+
+
+
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let a = 10;
+
+    // Local storage 
+    // key value pair , key : value 
+
+    // value - string type 
+
+    localStorage.setItem('a' , "10")
+    localStorage.setItem('b' , 10)
+    localStorage.setItem('c' , 10)
+    localStorage.setItem('d' , 10)
+
+    let ar = [3,4,4,5,6,7,7,8,8,8]
+
+    localStorage.setItem('arr' , ar)
+
+    // localStorage.removeItem('a')
+
+    let value = localStorage.getItem('arr')
+
+    // localStorage.clear()
+
+    console.log("a = " , typeof value)
+
+    let newArray = value.split(',')
+
+    // console.log("newArray = " ,typeof newArray)
+    console.log("newArray = " , newArray)
+
+    let obj = {
+        name : "Balaji",
+        age : 23
+    }
+
+    console.log(JSON.stringify(obj))
+
+    localStorage.setItem('obj' , JSON.stringify(obj)) // object to string - js object notation
+
+
+    let newObj = JSON.parse(localStorage.getItem('obj'))
+
+    console.log("newObj = " , newObj)
+
+
+    let num = parseInt(localStorage.getItem('b')) // Nan
+
+
+
+</script>

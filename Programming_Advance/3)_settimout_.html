@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="stopBtn" >Stop</button>
+
+</body>
+</html>
+
+<script>
+
+    
+// set timeout 1s , 10s , 300s
+
+// 1s = 1000
+// 2s - 2000
+
+// console.log("start")
+// console.log("middle")
+// console.log("end")
+
+
+// Asynchrnous 
+
+console.log("start")
+
+let timoutID = setTimeout(function (){ 
+    console.log('middle')
+}, 4000); // default 0
+
+console.log("end")
+
+// function stopTimer(timoutID)
+
+
+document.getElementById('stopBtn').addEventListener('click' ,function (){
+    clearInterval(timoutID)
+})
+
+// console.log('34')
+
+// 50
+
+
+
+</script>
+
