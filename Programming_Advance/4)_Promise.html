@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+// promise
+
+// cddsfregtrg 
+
+// operation - on going - it will complete in future
+
+// fetchData("http://www.efef.com")
+
+// 1. api Start 
+// 2. ongoing (fetching)
+// 3. success(data) or  error(message)
+
+// three states
+
+// 1. Pending(intial)
+// 2. Fulfilled(success - data)
+// 3. Rejected(error - data message)
+
+// fregfreg
+
+// API 
+
+// class Car{
+//     constructor(){
+//         this.modal = "3435"
+//     }
+// }
+
+// 1. using promise constructor we can create promise 
+// 2. three state Pending , Fulfilled , Rejected
+// 3. inside promise constructor we pass function(callback function) as argument
+// 4. passing resolve and reject arguments to that function
+// 5. we use promise which is already created by developers
+
+// 6. if it resolved it send data to .then((result)=>{}) <- result
+// 7. catch() <- goes here for error 
+
+// 8. if more than 1 .then() used then again promise is used
+
+// console.log("start")
+
+// let userData = new Promise((resolve , reject)=>{
+//     setTimeout(()=>{
+//         let success = true; // user profile name , age, gender {}
+//         if(success){
+//             resolve({name : "Balaji" , age : 21 , gender : "male"})
+//         }else{
+//             reject("error occured")
+//         }
+//     } , 5000)
+// });
+
+
+
+// console.log("userData = " , userData)
+
+// userData
+// .then((result)=>{
+
+//     console.log(result)
+//     console.log("userData = " , userData)
+//     // return checkAdminOruser() // i
+// })
+// .catch((error)=>{
+//     console.log(error)
+//     console.log("userData = " , userData)
+// })
+
+// console.log("End")
+
+//50lines
+
+
+let response = fetch("https://dummyjson.com/c/3029-d29f-4014-9fb4").then((result)=>{
+    return result.json() // parse to object
+}).then((result)=>{
+    console.log("result = " , result)
+}).catch((err)=>{
+    console.log("err = " , err)
+}) // api request
+
+console.log("response = " , response)
+
+
+
+</script>
+

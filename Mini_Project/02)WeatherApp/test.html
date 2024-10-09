@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+// let apiKey = "2bbc0692177ba1689efcc72b320d6ff8";
+let apiKey = "MW0erMLhXOx2Xn6CSnOpTw==vj74EsjOThZKvXlP";
+
+let cityName = "new york";
+
+// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+
+// fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
+fetch(`https://api.api-ninjas.com/v1/inflation?country=Canada`, {
+  method: 'GET',
+  headers: {
+    'X-Api-Key': apiKey
+  }
+})
+.then((res)=>{
+    return res.json();
+})
+.then((result)=>{
+    console.log("result = ", result)
+})
+
+
+const apikey = "7002d41d8e9106fbf16a0ee7d6b4d60b";
+const apiurl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+fetch(apiurl + cityName + `&appid=${apikey}`, {
+  method: 'GET',
+})
+.then((res)=>{
+    return res.json();
+})
+.then((result)=>{
+    console.log("result = ", result)
+})
+
+
+
+
+</script>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+
+
+    <main>
+
+        <section>
+
+            <div class="row">
+
+                <div class="col"></div>
+                <div class="col-7 border border-dark mt-5 rounded-2" style="overflow-x: auto;">
+
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col" class="text-nowrap">First Name</th>
+                            <th scope="col" class="text-nowrap">Last Name</th>
+                            <th scope="col">Mobile</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col" class="text-nowrap">Product Title</th>
+                            <th scope="col" class="text-nowrap">Product quantity</th>
+                            <th scope="col">Cost</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tableBody">
+
+                            <!-- <tr>
+                                <th scope="row">1</th>
+                                <td>Balaji</td>
+                                <td>K</td>
+                                <td>785878</td>
+                                <td>balaji@gmail.com</td>
+                                <td>Male</td>
+                            </tr> -->
+
+
+                         
+                        </tbody>
+                      </table>
+
+
+                      <div class="text-center">
+                        <a href="index.html" class="btn btn-primary">Back to register</a>
+                      </div>
+
+
+                    
+                </div>
+                <div class="col"></div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    
+    
+</body>
+</html>
+
+
+<script>
+
+    let userData = JSON.parse(localStorage.getItem('userData')) // string to array or object
+
+    let tableBody = document.getElementById('tableBody');
+
+    // for(let i=0;i<userData.length;i++){ // 0 , 1
+
+    //     let obj = userData[i];
+
+    //     let template = `<tr>
+    //     <th scope="row">${i + 1}</th>
+    //         <td>${obj.fname}</td>
+    //         <td>${obj.lname}</td>
+    //         <td>${obj.mobile}</td>
+    //         <td>${obj.email}</td>
+    //         <td>${obj.gender}</td>
+    //     </tr>`;
+
+    //     tableBody.innerHTML = tableBody.innerHTML + template;
+  
+    // }
+
+    userData.forEach((obj , index) => {
+
+        let tr = document.createElement('tr');
+
+        let indexTh = document.createElement('th');
+        let fnameTd = document.createElement('td');
+        let lnameTd = document.createElement('td');
+        let mobileTd = document.createElement('td');
+        let emailId = document.createElement('td');
+        let genderTd = document.createElement('td');
+
+        let productTitleTd = document.createElement('td');
+        let productCountTd = document.createElement('td');
+        let costTd = document.createElement('td');
+
+        indexTh.textContent = index + 1;
+        fnameTd.innerText = obj.tempData.fname;
+        lnameTd.innerText = obj.tempData.lname;
+        mobileTd.innerText = obj.tempData.mobile;
+        emailId.innerText = obj.tempData.email;
+        genderTd.innerText = obj.tempData.gender;
+
+        productTitleTd.innerText = obj.productTitle;
+        productCountTd.innerText = obj.productCount;
+        costTd.innerText = obj.cost;
+
+        tr.append(indexTh , fnameTd , lnameTd , mobileTd , emailId , genderTd , productTitleTd , productCountTd , costTd);
+
+        tableBody.appendChild(tr);
+
+    });
+
+    
+
+    
+
+
+
+  
+          
+
+
+
+
+
+
+</script>
